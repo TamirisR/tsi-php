@@ -11,7 +11,7 @@ echo '<br><br>';
 $i = 0;
 $j = 4;
 
-while ( $i < 5 ) {
+while ( $i < 5 && $j >= 0) {
     echo "Linha: $i $j <br>";
     $i++;
     $j--;
@@ -27,10 +27,10 @@ do {
     echo "Linha: $i $j <br>";
     $i++;
     $j--;
-} while ( $i < 5 );
+} while ( $i < 5 && $j >= 0 );
 echo '<br><br>';
 
-// exemplo com muitas linhas
+// exemplo de vetor
 
 $domingo = 0;
 $segunda = 1;

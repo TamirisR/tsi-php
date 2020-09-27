@@ -1,5 +1,11 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+date_default_timezone_set('America/Sao_Paulo');
+
 // exemplo com muitas linhas
 
 $domingo = 0;
@@ -35,7 +41,7 @@ switch ( date('w')){
         echo'sabádo';
     break;
 }
-/*
+
 
 $semana[0] = 'Domingo';
 $semana[1] = 'Segunda';
@@ -45,21 +51,14 @@ $semana[4] = 'Quinta';
 $semana[5] = 'Sexta';
 $semana[6] = 'Sabádo';
 
-$hoje = date('w');
+$hoje = date('1');
 
 echo "hoje é " . $semana[$hoje];
 
 echo'<br>';
 
-echo date('d/m/y');
-
-echo "<br>";
-
-
-var_dump($semana);
-
 unset($semana);
-/*
+
 $semana['Domingo'] = 0;
 $semana['Segunda'] = 1;
 $semana['Terca'] = 2;
@@ -74,7 +73,7 @@ $hoje = date('l');
 echo "<br> hoje é " . $semana[$hoje] . " com índice alfanúmerico";
 
 echo "<br>";
-*/
+
 //Execício
 $usuario = [	'nome' 	=> 	'Luiz Bono',
 				'idade'	=>	25,
@@ -85,17 +84,16 @@ $usuario = [	'nome' 	=> 	'Luiz Bono',
 
 //Mostrar o vetor dentro de string especial                
 echo "<br> O professor " .$usuario['nome'] . " tem " . $usuario['idade'] . " pesa " . number_format( $usuario['peso'], 2, ',' , '.') . " e é " . $usuario['signo'];
+unset($usuario);
 
 
 //Constante
 define('MUNDO', 'Radimundo Nonato');
 define('RES_P_PAG', 10);
+for ( $i = 0 ; $i < RES_P_PAG ; $i++ ) {
 
-
-for ( $i = 0 ; $i < RES_P_PAG ; $i++){
-    echo "Resultado $i<br>";
+	echo "Resultado $i <br>";
 }
-
 echo 'Ola' . MUNDO . "<br>";
 
 
@@ -108,8 +106,6 @@ $professores2 = array(
         'peso'  =>  67.8,
         'signo'  =>  'aquariano'
     ),
-
-
     1 => array(
         'nome'   =>   'Thiago Claro',
         'idade'  =>  27,
@@ -120,18 +116,13 @@ $professores2 = array(
         'nome'   =>   'Thiago Quintas',
         'idade'  =>  21,
         'peso'  =>  62.4,
-        'signo'  =>  'leonino'
-    )
-);
-
-var_dump($professores2);
+        'signo'  =>  'leonino'));
 
 echo "<br>"
 ?>
-<table border="1">
+<table border ="1">
 <tr> <td>ID</td> <td>nome</td> <td>idade</td> <td>Peso</td>
-<td>Signo</td>
-</tr>
+<td>Signo</td></tr>
 <?php
 
     foreach ($professores2 as $linha => $professor) {

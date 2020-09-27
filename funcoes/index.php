@@ -1,7 +1,13 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-function operacao( float $numero1, float $numero2, string $operacao = '+'):float{
+function operacao( float $numero1, 
+float $numero2, 
+string $operacao = '+'):float{
+
     switch($operacao){
         case '+':
             return $numero1 + $numero2;
@@ -16,14 +22,14 @@ function operacao( float $numero1, float $numero2, string $operacao = '+'):float
             return $numero1 * $numero2;
         
         default:
-        return 0.0;
+        return null;
     }
-};
+}
 
-echo "<br> O resultado: " . operacao(2.5, 2.5) . "<br>";
+//echo "<br> O resultado: " . operacao(2.5, 2.5) . "<br>";
 
 
-echo "<br> O resultado: " . operacao(2.5, 2.5, '-') . "<br>";
+//echo "<br> O resultado: " . operacao(2.5, 2.5, '-') . "<br>";
 
 //Fora do escopo da função
 $dia = 2;
@@ -41,8 +47,8 @@ function muda_nome(string &$var):string//Passagem de parâmetro por referência(
 {
     $var = 'Outro Nome';
     return $var;
-};
+}
 
 echo "<br><br> retornará " . muda_nome($nome) . "<br>"; 
 
-echo "A variave \$nome ainda vale: $nome <t>";
+echo "A variavel nome ainda vale: $nome ";
