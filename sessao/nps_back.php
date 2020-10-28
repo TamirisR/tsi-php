@@ -20,12 +20,15 @@ $registroavaliacao->bindParam(':textonota', $_POST['registronota']);
 
 if ($registroavaliacao->execute()) {
 
-    echo  '<br><br>Avaliação gravada com sucesso!';
+	echo  '<br><br>Avaliação gravada com sucesso!';
 } else {
 
-    echo '<br><br> :-( deu erro, tente novamente! ';
+	echo '<br><br> :-( deu erro, tente novamente! ';
 }
 
 
+
+
 echo '<br><br><a href="./agradecimento.php?nota=' . $nota . '">Seguir</a>';
-include 'nps_form.php';
+
+include 'footer_tpl.php';
