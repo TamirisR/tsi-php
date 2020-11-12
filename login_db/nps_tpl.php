@@ -15,8 +15,8 @@ $_SESSION['nome'] = 'Tami';
 				<?php 
 				for ( $i = 1 ; $i <= 10 ; $i++ ) {
 				
-					echo "	<input type='radio' id='nps$i' name='nota' value='$i'>\n 
-							<label for='nps$i'>$i</label>\n 
+					echo "	<input type='radio' id='nps$i' name='nota' value='$i'> 
+							<label for='nps$i'>$i</label> 
 							";
 				}
 				?>
