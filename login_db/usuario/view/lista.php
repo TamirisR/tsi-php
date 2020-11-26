@@ -14,7 +14,18 @@ foreach ($lista as $usuario) {
 				<td>{$usuario['id']}</td><td>{$usuario['nome']}</td><td>{$usuario['email']}</td>
 			</tr>";
 }
+foreach ($lista as $usuario) {
 
-echo '	</table>';
+	echo "	<tr>
+				<td>{$usuario['id']}</td>
+				<td>{$usuario['nome']}</td>
+				<td>{$usuario['email']}</td>
+				<td><a href='?apagar={$usuario['id']}'>apagar</a></td>
+				<td><a href='?editar={$usuario['id']}'>editar</a></td>
+			</tr>";
+}
+
+echo '	</table>
+		</center>';
 
 include '../footer_tpl.php';
